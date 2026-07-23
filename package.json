@@ -1,0 +1,14 @@
+{
+  "name": "raft-kvstore",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "A distributed key-value store built on a simplified Raft consensus implementation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "node1": "node index.js 1 localhost:8001 2=localhost:8002 3=localhost:8003",
+    "node2": "node index.js 2 localhost:8002 1=localhost:8001 3=localhost:8003",
+    "node3": "node index.js 3 localhost:8003 1=localhost:8001 2=localhost:8002",
+    "test": "node --test test/"
+  }
+}
